@@ -1,4 +1,4 @@
-rom PyQt5 import uic,QtWidgets
+from PyQt5 import uic,QtWidgets
 import mysql.connector
 
 banco = mysql.connector.connect(
@@ -22,6 +22,15 @@ def funcao_principal():
     elif formulario.radioButton_2.isChecked() :
         print("Categoria Utensilios foi selecionado")
         categoria ="Utensilios"
+    elif formulario.radioButton_4.isChecked() :
+        print("Categoria informática foi selecionado")
+        categoria ="informática"
+    elif formulario.radioButton_5.isChecked() :
+        print("Categoria Eletrodomesticos foi selecionado")
+        categoria ="Eletrodomesticos"
+    elif formulario.radioButton_6.isChecked() :
+        print("Categoria Limpeza foi selecionado")
+        categoria ="Limpeza"
     else :
         print("Categoria Verduras foi selecionado")
         categoria ="Verduras"
